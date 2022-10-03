@@ -1,6 +1,6 @@
 let {token} = require('./config.json')
-const { Client, Intents } = require('discord.js')
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] })
+const { Client, GatewayIntentBits } = require('discord.js')
+const client = new Client({ intents: [GatewayIntentBits.Guilds] })
 
 client.once('ready', () => {
     console.log('Bot online')
